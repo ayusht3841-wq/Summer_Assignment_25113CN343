@@ -5,9 +5,16 @@ int main()
 
     printf("Enter the number of terms: ");
     scanf("%d",&n);
+    
 
-    printf("%d ",a);
-    printf("%d ",b);
+    if(n>=1)
+    {
+        printf("%d",a);
+    }
+    if(n>=2)
+    {
+        printf("%d",b);
+    }
 
     for(int i=3;i<=n;i++) // i=3 as 1st term is 0 and 2nd term is 1
     {
