@@ -1,19 +1,35 @@
 #include<stdio.h>
+int power(int x,int n)
+{
+  int result=1;
+  for(int i=1;i<=n;i++)
+{
+  result=result*x;
+}
+return result;
+}
+
 int main()
 {
-    int n,temp,r,sum=0;
+    int n,temp,r,sum=0,count=0,temp1; //here count is for count the no. of digits of the given number.
 
     printf("Enter the number: ");
     scanf("%d",&n);
 
-    temp=n; // We did this because after performing n/10 operation multiple times n would be finally equal to zero. And we would not able to check whether the no. is armstron or not. 
-    
-    
+    temp=n; // We did this because after performing n/10 operation multiple times n would be finally equal to zero. And we would not able to check whether the no. is armstrong or not. 
+
     while(temp!=0)
+        {
+            count++;
+            temp=temp/10;
+        }   
+        
+    temp1=n;// as temp becomes zero after counting digits.
+    while(temp1!=0)
     {
-        r=temp%10;
-        sum=sum+r*r*r;
-        temp=temp/10;
+        r=temp1%10;
+        sum=sum+power(r,count);
+        temp1=temp1/10;
     }
 
     if(sum==n)
