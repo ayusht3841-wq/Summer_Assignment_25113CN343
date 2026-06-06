@@ -18,6 +18,12 @@ int main()
     printf("Enter the number: ");
     scanf("%d",&n);
 
+    if(n==0)
+    {
+        printf("Not a strong number");
+        return 0; // To stop the program and exit the main as it would give two contradictory outputs. 
+    }
+
     temp=n;
 
     while(temp!=0)
