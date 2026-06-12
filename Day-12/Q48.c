@@ -10,12 +10,12 @@ int perfect(int n)
         {
             sum=sum+i;
         }
+    }
 
-        if(sum==n)
+    if(sum==n)
         {
             return 1;
         }
-    }
 
     return 0;
 }
